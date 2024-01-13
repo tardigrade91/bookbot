@@ -7,7 +7,7 @@ def main():
     words = file_contents.split() 
     num_words = len(words)
 
-    print("--- Bein report of books/frankenstein.text ---") 
+    print("--- Begin report of books/frankenstein.text ---") 
 
     print(f"{num_words} words found in the document")
 
@@ -33,14 +33,16 @@ def main():
     for letter in letter_dict:
         value_list.append(letter_dict[letter]) 
     value_list.sort()
-    
-    # this will output a list of the values in descending order 
-    # print(value_list[::-1])
-    # this is enough to confirm my code is working correctly. 
-    # I'm not going to bother fixing the report so it looks the same.
 
-    # print out the letter part of the report
-    for i in letter_dict: 
-        print(f" The letter '{i}' was found {letter_dict[i]} times")
+    # print out the rank order of the dictionary 
+    print("The letters in rank order are:")
+    for value in value_list[::-1]:
+        for letter in letter_dict:
+            if letter_dict[letter] == value: 
+                print(f" The letter '{letter}' was found {value} times")
+                letter_dict[letter] = -1
+                break
+    print("--- End report of books/frankenstein.text ---")
+
 
 main()
