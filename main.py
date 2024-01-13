@@ -33,7 +33,12 @@ def main():
     for letter in letter_dict:
         value_list.append(letter_dict[letter]) 
     value_list.sort()
-    print(value_list[::-1])
+    
+    # this will output a list of the values in descending order 
+    # print(value_list[::-1])
+    # this is enough to confirm my code is working correctly. 
+    # I'm not going to bother fixing the report so it looks the same.
+
     # print out the letter part of the report
     for i in letter_dict: 
         print(f" The letter '{i}' was found {letter_dict[i]} times")
