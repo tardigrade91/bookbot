@@ -34,7 +34,7 @@ def main():
         value_list.append(letter_dict[letter]) 
     value_list.sort()
 
-    # print out the rank order of the dictionary 
+    # print out the rank order of the dictionary (this was written by copilot with some prompting from me)
     print("The letters in rank order are:")
     for value in value_list[::-1]:
         for letter in letter_dict:
